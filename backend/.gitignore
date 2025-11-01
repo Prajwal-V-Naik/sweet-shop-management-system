@@ -1,0 +1,74 @@
+# =======================================
+# Node & TypeScript Backend .gitignore
+# =======================================
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+
+# Jest cache and test results
+jest-html-reporters-*.html
+coverage/
+*.lcov
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+debug.log
+error.log
+
+# Temporary files
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.swp
+
+# OS system files
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Misc cache files
+.cache/
+.parcel-cache/
+.eslintcache
+.npm/
+pnpm-debug.log*
+
+# Process IDs
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Lockfiles (optional)
+package-lock.json
+yarn.lock
+
+# =======================================
+# Optional: Git keep empty folders
+# =======================================
+# !src/controllers/.gitkeep
+# !src/middlewares/.gitkeep
+# !src/models/.gitkeep
+# !src/routes/.gitkeep
