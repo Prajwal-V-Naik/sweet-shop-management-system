@@ -13,7 +13,9 @@ connectDB()
 
 // Routes here import and use
 const authRoutes = require("./routes/authRoutes")
+const sweetRoutes = require('./routes/sweetRoutes')
 app.use("/api/auth", authRoutes)
+app.use("/api/sweets", sweetRoutes)
  
 app.get("/", (req, res) => {
   res.json({ message: "API running" })
