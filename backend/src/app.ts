@@ -10,9 +10,13 @@ app.use(cors())
 app.use(express.json())
 
 connectDB()
+
+// Routes here import and use
+const authRoutes = require("./routes/authRoutes")
+app.use("/api/auth", authRoutes)
  
 app.get("/", (req, res) => {
-  res.json({ message: "Testing message for route" });
+  res.json({ message: "API running" })
 });
 
 const PORT = process.env.PORT || 5000
