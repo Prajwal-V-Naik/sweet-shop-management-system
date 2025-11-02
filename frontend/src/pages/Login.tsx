@@ -24,14 +24,14 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div className="container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="p-4">
+      <h2 className="font-bold uppercase">Login</h2>
+      <form onSubmit={handleSubmit} className="p-4 border rounded-md flex flex-col gap-4 justify-start items-start w-fit mt-4">
         <input name="email" placeholder="Email" onChange={handleChange} />
         <input name="password" placeholder="Password" type="password" onChange={handleChange} />
-        <button type="submit">Login</button>
+        <button className="border px-2 rounded-sm bg-green-400 hover:text-white" type="submit">Login</button>
       </form>
-      <p>{message}</p>
+      <p className="text-red-300 ml-1 mt-2">{message}</p>
     </div>
   )
 }
