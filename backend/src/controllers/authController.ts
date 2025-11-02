@@ -1,11 +1,14 @@
 const User = require("../models/User")
+const { validationResult } = require("express-validator")
 
 const registerUser = async (req, res) => {
   try {
-    const { username, email, password } = req.body
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ message: "Validation failed", errors: errors.array() })
+    }
 
-    if (!username || !email || !password)
-      return res.status(400).json({ message: "All fields are required" })
+    const { username, email, password } = req.body
 
     const existingUser = await User.findOne({ email })
     if (existingUser)
