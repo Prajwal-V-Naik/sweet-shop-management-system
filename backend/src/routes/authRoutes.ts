@@ -1,6 +1,6 @@
 const express = require("express")
 const {body} = require("express-validator")
-const { registerUser } = require("../controllers/authController")
+const { registerUser, loginUser } = require("../controllers/authController")
 
 const router = express.Router()
 
@@ -13,5 +13,6 @@ router.post(
   ],
   registerUser
 )
+router.post("/login", loginUser)
 
 module.exports = router
